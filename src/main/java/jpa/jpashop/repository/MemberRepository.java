@@ -1,4 +1,4 @@
-package jpa.jpashop.domain.repository;
+package jpa.jpashop.repository;
 
 import jpa.jpashop.domain.Member;
 import org.springframework.stereotype.Repository;
