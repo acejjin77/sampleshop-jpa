@@ -1,4 +1,4 @@
-package jpa.jpashop.domain.repository;
+package jpa.jpashop.repository;
 
 import jpa.jpashop.domain.item.Item;
 import lombok.RequiredArgsConstructor;
@@ -26,7 +26,7 @@ public class ItemRepository {
     }
 
     public List<Item> findAll() {
-        return entityManager.createQuery("select i fron Item i", Item.class)
+        return entityManager.createQuery("select i from Item i", Item.class)
                 .getResultList();
     }
 

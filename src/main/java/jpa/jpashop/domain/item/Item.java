@@ -1,9 +1,10 @@
 package jpa.jpashop.domain.item;
 
 import jpa.jpashop.domain.Category;
-import jpa.jpashop.domain.exception.NotEnoughStockException;
+import jpa.jpashop.exception.NotEnoughStockException;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.List;
 @DiscriminatorColumn()
 @Getter
 @Setter
+@ToString
 public abstract class Item {
 
     @Id
