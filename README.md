@@ -10,6 +10,8 @@
 2. merge 후 되돌리기로 reset HEAD 를 사용하고 다시 issue#1 브랜치로 pull 했는데, 적용이 안됨.
     - 이슈 해결후 브랜치로 push 후 pull request 가 안가짐.
 
+3. git commit 후 push, pull request 까지 보낸 뒤 Close를 하면 그 뒤에 같은 디렉토리에서 add가 안됨.
+
 
 ### restful-api
 
