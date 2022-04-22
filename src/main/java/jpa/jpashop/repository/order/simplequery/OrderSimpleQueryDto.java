@@ -1,9 +1,7 @@
-package jpa.jpashop.repository.order.queries;
+package jpa.jpashop.repository.order.simplequery;
 
 import jpa.jpashop.domain.Address;
-import jpa.jpashop.domain.Order;
 import jpa.jpashop.domain.OrderStatus;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDateTime;
