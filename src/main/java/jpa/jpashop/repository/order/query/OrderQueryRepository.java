@@ -19,8 +19,6 @@ public class OrderQueryRepository {
     public List<OrderQueryDto> findOrderQueryDtos() {
         //루트 조회(toOne 코드를 모두 한번에 조회)
         List<OrderQueryDto> result = findOrders();
-
-        //루프를 돌면서 컬렉션 추가(추가 쿼리 실행)
         result.forEach(o -> {
             List<OrderItemQueryDto> orderItems = findOrderItems(o.getOrderId());
             o.setOrderItems(orderItems);

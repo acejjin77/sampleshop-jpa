@@ -35,7 +35,4 @@ public class OrderQueryDto {
         this.address = address;
         this.orderItems = orderItems;
     }
-
-    public void setOrderItems(List<OrderItemQueryDto> orderItemQueryDtos) {
-    }
 }
