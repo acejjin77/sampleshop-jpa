@@ -16,7 +16,7 @@ public class Member {
 
     @Id
     @GeneratedValue
-    @Column(name = "member_id")
+    @Column(name = "m ember_id")
     private Long id;
 
     @NotEmpty(message = "회원 이름은 필수입니다.")
