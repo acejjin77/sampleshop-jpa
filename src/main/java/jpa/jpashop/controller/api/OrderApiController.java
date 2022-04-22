@@ -6,8 +6,9 @@ import jpa.jpashop.domain.OrderItem;
 import jpa.jpashop.domain.OrderStatus;
 import jpa.jpashop.repository.OrderRepository;
 import jpa.jpashop.repository.OrderSearch;
+import jpa.jpashop.repository.order.query.OrderQueryDto;
+import jpa.jpashop.repository.order.query.OrderQueryRepository;
 import lombok.Data;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
 public class OrderApiController {
 
     private final OrderRepository orderRepository;
+    private final OrderQueryRepository orderQueryRepository;
 
     @GetMapping("/api/v2/orders")
     public List<OrderDto> ordersV2() {
@@ -55,15 +57,15 @@ public class OrderApiController {
         return collect;
     }
 
-//    @GetMapping("/api/v4/orders")
-//    public List<OrderQueryDto> ordersV4() {
-//        return orderQueryRepository.findOrderQueryDtos();
-//    }
-//
-//    @GetMapping("/api/v5/orders")
-//    public List<OrderQueryDto> orderV5() {
-//        return orderQueryRepository.findAllByDto_optimization();
-//    }
+    @GetMapping("/api/v4/orders")
+    public List<OrderQueryDto> ordersV4() {
+        return orderQueryRepository.findOrderQueryDtos();
+    }
+
+    @GetMapping("/api/v5/orders")
+    public List<OrderQueryDto> orderV5() {
+        return orderQueryRepository.findAllByDto_optimization();
+    }
 
     @Data
     static class OrderDto {
